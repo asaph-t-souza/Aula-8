@@ -1,13 +1,13 @@
-const opcao = "Vermelho";
+numero = prompt("Digite um numero");
 
-switch(opcao){
-    case "Vermelho": case "Roxo":
-        alert("Botão Vermelho selecionado");
-        break;
-    case "Azul":
-        alert("Botão Azul selecionado");
-        break;
-    default:
-        alert("Opção Invalida");
-        break;
+function fatorial(numero){
+    if(numero === 0){
+        return 1;
+    }
+    if(numero < 0 || numero%1 !== 0){
+        return "Insira um numero inteiro positivo"
+    }
+    return numero * fatorial(numero - 1);
 }
+
+alert(Number(fatorial(numero)));
